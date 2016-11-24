@@ -1,0 +1,17 @@
+{
+  "name": "ble-discovery",
+  "version": "1.0",
+  "title": "BLE Discovery",
+  "description": "App to discover Bluetooth Low Energy (BLE) devices and then connect to and display data for a BLE device",
+  "tags": [
+    {
+      "label": "ble",
+      "type": "comm"
+    }
+  ],
+  "libraries": [],
+  "index-file": "index.html",
+  "uuid": "bc6bbaf0-b220-4a1f-a63b-3790b2c0a68d",
+  "icon": "app-icon.png",
+  "doc-url": "https://evothings.com/2.1/doc/examples/ble-discovery.html"
+}
