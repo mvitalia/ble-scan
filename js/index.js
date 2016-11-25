@@ -134,9 +134,9 @@ app.startLeScan = function()
 };
 
 /** Handler for when device in devices list was clicked. */
-app.eventDeviceClicked = function(event) {
+/*app.eventDeviceClicked = function(event) {
 	app.connect(event.data.address, event.data.name);
-};
+};*/
 
 // Stop scanning for devices.
 app.stopLeScan = function()
@@ -163,7 +163,7 @@ app.runScanTimer = function()
 	}
 };
 
-app.connect = function(address, name)
+/*app.connect = function(address, name)
 {
 	app.stopLeScan();
 	console.log('connect('+address+')');
@@ -182,8 +182,9 @@ app.connect = function(address, name)
 	{
 		console.log('connect error: ' + errorCode);
 	});
-};
+};*/
 
+/*
 app.getServices = function(deviceHandle)
 {
 	ble.readAllServiceData(deviceHandle, function(services) {
@@ -252,7 +253,7 @@ app.getServices = function(deviceHandle)
 	{
 		console.log('readAllServiceData error: ' + errorCode);
 	});
-};
+};*/
 
 // Set format flags.
 function formatFlags(name, flags, translation)
