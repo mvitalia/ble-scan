@@ -139,13 +139,13 @@ app.eventDeviceClicked = function(event) {
 };
 
 // Stop scanning for devices.
-/*app.stopLeScan = function()
+app.stopLeScan = function()
 {
 	console.log('Stopping scan...');
 	ble.stopScan();
 	app.isScanning = false;
 	clearTimeout(app.scanTimer);
-};*/
+};
 
 // Run a timer to restart scan in case the device does
 // not automatically perform continuous scan.
