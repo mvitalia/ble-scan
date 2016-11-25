@@ -67,7 +67,7 @@ app.receivedEvent = function(id)
 {
 	console.log('Received Event: ' + id);
 };
-
+/*
 app.testCharConversion = function()
 {
 	var fail = false;
@@ -95,7 +95,7 @@ app.testCharConversion = function()
 			}
 		});
 	}
-};
+};*/
 
 app.knownDevices = {};
 
@@ -256,7 +256,7 @@ app.getServices = function(deviceHandle)
 };*/
 
 // Set format flags.
-function formatFlags(name, flags, translation)
+/*function formatFlags(name, flags, translation)
 {
 	var str = name+':';
 	for (var key in translation) {
@@ -264,144 +264,4 @@ function formatFlags(name, flags, translation)
 			str += ' '+translation[key];
 	}
 	return str;
-}
-
-/** jQuery Mobile Collapsible dynamic UI helper methods
-
-	These purpose of these methods is to simplify the creation and modification
-	of a jQuery Mobile collapsible list. It uses a hidden template element from
-	which sub-elements are cloned and inserted into the (visible) collapsible
-	list.
-
-	Template element:
-	<div id="collapsible-template" data-role="collapsible-set" data-theme="a">
-		<div data-role="collapsible">
-			<h2></h2>
-			<ul data-role="listview" data-theme="b" data-divider-theme="b">
-				<li></li>
-			</ul>
-		</div>
-	</div> */
-(function ( $ ) {
-
-	$.fn.addCollapsibleSet = function(options)
-	{
-		var params = $.extend({
-			template: $(this).data('template'),
-		}, options );
-
-		// check the validity of the template
-		$.collapsibleSetTemplateCheck(params.template);
-
-		// clone the template's collapsible-set element and its children (without their data & events)
-		var $collapsibleSet = params.template.clone(false);
-		// clear the id attribute from the cloned element
-		$collapsibleSet.attr('id' , '');
-		// remove its children
-		$collapsibleSet.empty();
-
-		// remember which template was used for creating the element
-		// to avoid having to specify it at each call
-		$collapsibleSet.data('template', params.template);
-
-		// insert the element into the DOM
-		$(this).append($collapsibleSet);
-
-		return $collapsibleSet;
-	};
-
-	$.fn.addCollapsible = function(options)
-	{
-		var params = $.extend({
-			template: $(this).data('template'),
-			title: ''
-		}, options );
-
-		// check the validity of the template
-		$.collapsibleSetTemplateCheck(params.template);
-
-		// clone the template's collapsible element and its children (without their data & events)
-		var $collapsible = params.template.find('div[data-role=collapsible]:first').clone(false);
-		// remove any children except the title h2 element
-		$collapsible.children(':not(.ui-collapsible-heading)').remove(); // TODO: handle hard-coded title element type
-
-		// set the collapsible's title
-		$collapsible.find('.ui-collapsible-heading').first().text(params.title); // TODO: handle hard-coded title element type
-
-		// remember which template was used for creating the element
-		// to avoid having to specify it at each call
-		$collapsible.data('template', params.template);
-
-		// append the element to the closest parent collapsible-set
-		$(this).closest('div[data-role=collapsible-set]').append($collapsible); // TODO: handle cases lacking a collapsible-set
-
-		return $collapsible;
-	};
-
-	$.fn.getCollapsibleTitle = function()
-	{
-		if ($(this).prop('data-role') == 'collapsible') {
-			return $('div[data-role=collapsible] > h2:first', this).text(params.title);
-		}
-	}
-
-	$.fn.collapsibleTitleElm = function()
-	{
-		if ($(this).closest('div[data-role=collapsible]').find('.ui-collapsible-heading-toggle')) {
-			return $(this).closest('div[data-role=collapsible]').find('.ui-collapsible-heading-toggle').first();
-		}
-		return $(this).closest('div[data-role=collapsible]').find('.ui-collapsible-heading').first();
-	}
-
-	$.fn.addListView = function(options)
-	{
-		var params = $.extend({
-			template: $(this).data('template'),
-		}, options );
-
-		// clone the template's root listview element and its children (without their data & events)
-		var $listView = params.template.find('ul[data-role=listview]:first').clone(false);
-		// remove all its children list items
-		$listView.children('li').remove();
-
-		// remember which template was used for creating the element
-		// to avoid having to specify it at each call
-		$listView.data('template', params.template);
-
-		// append the element to the closest parent collapsible
-		$(this).closest('div[data-role=collapsible]').append($listView); // TODO: handle cases lacking a collapsible
-
-		return $listView;
-	};
-
-	$.fn.addListViewItem = function(options)
-	{
-		var params = $.extend({
-			template: $(this).data('template'),
-			text: ''
-		}, options );
-
-		// clone the template listview item
-		var $listViewItem = params.template.find('ul[data-role=listview]:first').
-										children('li:first').clone(false);
-
-		// remember which template was used for creating the element
-		// to avoid having to specify it at each call
-		$listViewItem.data('template', params.template);
-
-		// set the contents of the list item
-		$listViewItem.html(params.text);
-
-		// append the element to the closest parent listview
-		$(this).closest('ul[data-role=listview]').append($listViewItem);
-
-		return $listViewItem;
-	};
-
-	$.collapsibleSetTemplateCheck = function($template)
-	{
-		if (!$template || $template.attr('data-role') !== 'collapsible-set')
-			throw new Error('collapsibleSet error: template must have data-role=collapsible-set');
-	};
-
-}( jQuery ));
+}*/
