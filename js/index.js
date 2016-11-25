@@ -139,17 +139,17 @@ app.eventDeviceClicked = function(event) {
 };
 
 // Stop scanning for devices.
-app.stopLeScan = function()
+/*app.stopLeScan = function()
 {
 	console.log('Stopping scan...');
 	ble.stopScan();
 	app.isScanning = false;
 	clearTimeout(app.scanTimer);
-};
+};*/
 
 // Run a timer to restart scan in case the device does
 // not automatically perform continuous scan.
-app.runScanTimer = function()
+/*app.runScanTimer = function()
 {
 	if (app.isScanning)
 	{
@@ -161,9 +161,9 @@ app.runScanTimer = function()
 		}
 		app.scanTimer = setTimeout(app.runScanTimer, app.scanInterval);
 	}
-};
+};*/
 
-app.connect = function(address, name)
+/*app.connect = function(address, name)
 {
 	app.stopLeScan();
 	console.log('connect('+address+')');
@@ -182,9 +182,9 @@ app.connect = function(address, name)
 	{
 		console.log('connect error: ' + errorCode);
 	});
-};
+};*/
 
-app.getServices = function(deviceHandle)
+/*app.getServices = function(deviceHandle)
 {
 	ble.readAllServiceData(deviceHandle, function(services) {
 		$("#serviceList").empty();
@@ -252,7 +252,7 @@ app.getServices = function(deviceHandle)
 	{
 		console.log('readAllServiceData error: ' + errorCode);
 	});
-};
+};*/
 
 // Set format flags.
 function formatFlags(name, flags, translation)
