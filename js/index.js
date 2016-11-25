@@ -163,7 +163,7 @@ app.runScanTimer = function()
 	}
 };
 
-/*app.connect = function(address, name)
+app.connect = function(address, name)
 {
 	app.stopLeScan();
 	console.log('connect('+address+')');
@@ -182,7 +182,7 @@ app.runScanTimer = function()
 	{
 		console.log('connect error: ' + errorCode);
 	});
-};*/
+};
 
 /*app.getServices = function(deviceHandle)
 {
