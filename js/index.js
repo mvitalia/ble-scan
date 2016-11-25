@@ -184,7 +184,7 @@ app.connect = function(address, name)
 	});
 };
 
-/*app.getServices = function(deviceHandle)
+app.getServices = function(deviceHandle)
 {
 	ble.readAllServiceData(deviceHandle, function(services) {
 		$("#serviceList").empty();
@@ -252,7 +252,7 @@ app.connect = function(address, name)
 	{
 		console.log('readAllServiceData error: ' + errorCode);
 	});
-};*/
+};
 
 // Set format flags.
 function formatFlags(name, flags, translation)
