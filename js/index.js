@@ -149,7 +149,7 @@ app.eventDeviceClicked = function(event) {
 
 // Run a timer to restart scan in case the device does
 // not automatically perform continuous scan.
-/*app.runScanTimer = function()
+app.runScanTimer = function()
 {
 	if (app.isScanning)
 	{
@@ -161,7 +161,7 @@ app.eventDeviceClicked = function(event) {
 		}
 		app.scanTimer = setTimeout(app.runScanTimer, app.scanInterval);
 	}
-};*/
+};
 
 /*app.connect = function(address, name)
 {
